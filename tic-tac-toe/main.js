@@ -4,8 +4,9 @@ function makeBoard(height, width) {
 
 
     for (let i = 1; i <= height; i++) {
+
         const row = document.createElement("div")
-        
+
         for (let j = 1; j <= width; j++) {
             const square = document.createElement("div")
             square.classList.add("empty")
@@ -20,4 +21,16 @@ function makeBoard(height, width) {
 makeBoard(3, 3)
 
 console.log(ticTacToe)
+
+const squares = document.querySelectorAll(".square")
+
+for (let square of squares) {
+    square.addEventListener("click", function makeMove(e) {
+        const sqr = e.target
+        sqr.textContent = "X"
+    })
+}
+
+
+
 
