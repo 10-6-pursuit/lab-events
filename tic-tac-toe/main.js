@@ -20,16 +20,35 @@ function makeBoard(height, width) {
 
 makeBoard(3, 3)
 
-console.log(ticTacToe)
-
 const squares = document.querySelectorAll(".square")
 
 for (let square of squares) {
     square.addEventListener("click", function makeMove(e) {
+        const emptySquares = document.querySelectorAll(".empty")
+        let letter;
+        if (emptySquares.length % 2 === 0) {
+            letter = "O"
+        } else {
+            letter = "X"
+        }
         const sqr = e.target
-        sqr.textContent = "X"
+        const attribute = sqr.getAttribute("class")
+        if (attribute.includes("empty")) {
+            sqr.textContent = `${letter}`
+            sqr.classList.remove("empty")
+            console.log(emptySquares.length)
+        }
     })
 }
+
+const reset = document.querySelector("button")
+
+reset.addEventListener("click", () => {
+    for (let square of squares) {
+        square.textContent = ""
+        square.classList.add("empty")
+    }
+})
 
 
 
