@@ -66,3 +66,29 @@ You will need to complete the following tasks. If you're unclear about any of th
 Write a function that checks if all the squares are full. If they are, make a pop up that says "Game Over"
 
 Create some game logic that checks if X or O won and create a message displaying who won.
+
+// Select all the switch buttons
+const switches = document.querySelectorAll('.switch');
+
+// Loop through each switch
+switches.forEach(function(switchBtn) {
+  // Add a click event listener to each switch
+  switchBtn.addEventListener('click', function() {
+    // Get the parent element of the clicked switch, which has the class 'room'
+    const room = switchBtn.parentElement;
+    // Check if the room is currently dark
+    if (room.classList.contains('dark')) {
+      // If it is dark, remove the 'dark' class and add 'light'
+      room.classList.remove('dark');
+      room.classList.add('light');
+      // Change the button text to 'ON'
+      switchBtn.textContent = 'ON';
+    } else {
+      // If it is light, remove the 'light' class and add 'dark'
+      room.classList.remove('light');
+      room.classList.add('dark');
+      // Change the button text to 'OFF'
+      switchBtn.textContent = 'OFF';
+    }
+  });
+});
