@@ -71,8 +71,8 @@ header h1 {
 }
 
 #wrapper {
-  min-height: 100%;
-  margin-bottom: -60px;
+  min-height: fit-content;
+  /* margin-bottom: -60px; */
 }
 
 nav {
@@ -85,6 +85,7 @@ a {
   color: plum;
   font-size: 2em;
 }
+
 a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
