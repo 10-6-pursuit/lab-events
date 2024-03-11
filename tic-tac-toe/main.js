@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //Instead of addEventListener we can do the below
-  //We can then do nav.on("click");
 HTMLElement.prototype.on = (a,b,c) => this.addEventListener(a,b,c);
 HTMLElement.prototype.off = (a,b) => this.removeEventListener(a,b);
 HTMLElement.prototype.$ = (s) => this.querySelector(s);
@@ -33,12 +32,12 @@ function makeBoard () {
   }
 }
 //Loads makeBoard() when DOM is fully loaded
-document.addEventListener("DOMContentLoaded", makeBoard());
+document.on("DOMContentLoaded", makeBoard());
 
 //Create function adding eventListener to squares
 // {once:true} allows a square to only have an eventListener once
 square.forEach((cell) => {
-  cell.addEventListener("click", makeMove, {once:true})
+  cell.on("click", makeMove, {once:true})
 })
 
 function makeMove() {
