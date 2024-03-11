@@ -53,6 +53,7 @@ header h1 {
   height: 500px;
   margin: 0 auto;
   width: 500px;
+  background: rgb(225, 224, 224);
 }
 
 .cell {
