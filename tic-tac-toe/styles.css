@@ -24,6 +24,14 @@ h1 {
   flex-wrap: wrap;
   padding: 2em 0;
 }
+/* Creating 3x3 Grid for squares */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
 
 .square {
   height: 120px;
@@ -34,6 +42,49 @@ h1 {
   justify-content: center;
   font-size: 2em;
   font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+.square.x::before,
+.square.x::after {
+  content: '';
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: black;
+}
+
+.square.x:before {
+  transform: rotate(45deg);
+}
+
+.square.x:after {
+  transform: rotate(-45deg);
+}
+
+.square.o::before,
+.square.o::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.square.o::before {
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+
+.square.o::after {
+  width: 75px;
+  height: 75px;
+  background: white;
+}
+
+.cell.x,
+.cell.o {
+  cursor: not-allowed;
 }
 
 .square:hover {
@@ -62,6 +113,7 @@ button {
   display: block;
   margin: auto;
   background: plum;
+  cursor: pointer;
 }
 
 a {
@@ -72,4 +124,35 @@ a {
 a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
+}
+
+.winning-message {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+  opacity: 90%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 150px;
+}
+
+.winning-message.show {
+  display: flex;
+}
+
+.winning-message button {
+  font-size: 1rem;
+  margin-bottom: 500px;
+}
+
+.winning-message button:hover {
+  background: purple;
+  color: white;
 }

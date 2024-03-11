@@ -47,9 +47,9 @@ Feel free to add other fun features to build out your pixel painter!
 
 You will need to complete the following tasks. If you're unclear about any of the instructions below, reach out to your instructor.
 
-- [ ] Write a function called `makeBoard()` that will generate 9 `div` with the class `empty` and another class `square`.
+- [x] Write a function called `makeBoard()` that will generate 9 `div` with the class `empty` and another class `square`.
 
-- [ ] Call `makeBoard()` on page load so that 9 squares appear and the board is 3 x 3 squares.
+- [x] Call `makeBoard()` on page load so that 9 squares appear and the board is 3 x 3 squares.
 
 - [ ] Write a function called `makeMove()` that is an event handler for the `div`s with the class of `square` that
 
