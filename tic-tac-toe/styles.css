@@ -49,17 +49,17 @@ h1 {
 .square.x::before,
 .square.x::after {
   content: '';
-  width: 100px;
+  width: 20px;
   height: 100px;
   position: absolute;
-  background: black;
+  background: rgb(255, 255, 255);
 }
 
-.square.x:before {
+.square.x::before {
   transform: rotate(45deg);
 }
 
-.square.x:after {
+.square.x::after {
   transform: rotate(-45deg);
 }
 
@@ -73,17 +73,17 @@ h1 {
 .square.o::before {
   width: 100px;
   height: 100px;
-  background: black;
+  background: rgb(255, 255, 255);
 }
 
 .square.o::after {
   width: 75px;
   height: 75px;
-  background: white;
+  background: rgb(0, 0, 0);
 }
 
-.cell.x,
-.cell.o {
+.square.x,
+.square.o {
   cursor: not-allowed;
 }
 
@@ -126,7 +126,7 @@ a:hover {
   opacity: 0.5;
 }
 
-.winning-message {
+.message {
   display: none;
   flex-direction: column;
   position: fixed;
@@ -143,16 +143,16 @@ a:hover {
   margin-top: 150px;
 }
 
-.winning-message.show {
+.message.show {
   display: flex;
 }
 
-.winning-message button {
+.message button {
   font-size: 1rem;
   margin-bottom: 500px;
 }
 
-.winning-message button:hover {
+.message button:hover {
   background: purple;
   color: white;
 }

@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       canvas.appendChild(div)
     }
   }
-
+  // document.on("DOMContentLoaded", makeCells());
   window.onload = makeCells();
 
   //When clicked on a .cell,background changes to match the background of #current-color.

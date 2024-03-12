@@ -11,11 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
     return document.createElement(args);
   }
 
-  //Instead of addEventListener we can do the below
-HTMLElement.prototype.on = (a,b,c) => this.addEventListener(a,b,c);
-HTMLElement.prototype.off = (a,b) => this.removeEventListener(a,b);
-HTMLElement.prototype.$ = (s) => this.querySelector(s);
-HTMLElement.prototype.$$ = (s) => this.querySelectorAll(s);
+//Instead of addEventListener we can do the below
+HTMLElement.prototype.on = function(a, b, c) {
+  this.addEventListener(a, b, c);
+};
+
+HTMLElement.prototype.off = function(a, b, c) {
+  this.removeEventListener(a, b, c);
+};
+
+HTMLElement.prototype.$ = function(a, b, c) {
+  this.querySelector(a, b, c);
+};
+
+HTMLElement.prototype.$$ = function(a, b, c) {
+  this.querySelectorAll(a, b, c);
+};
 //----------------------------------------------------------
 //Creating section with class="board" and appending to main
 const main = $("main");
@@ -32,27 +43,55 @@ function makeBoard () {
   }
 }
 //Loads makeBoard() when DOM is fully loaded
-document.on("DOMContentLoaded", makeBoard());
-// window.onload = makeBoard();
+// document.on("DOMContentLoaded", makeBoard());
+window.onload = makeBoard();
 
 //create variable for circle and square for turn selection
-
+const x = "x";
+const o = "o";
 //Create function adding eventListener to squares
 // {once:true} allows a square to only have an eventListener once
-square.forEach((cell) => {
-  cell.on("click", makeMove, {once:true})
+const squares = $$(".square");
+
+squares.forEach((square) => {
+  square.on("click", makeMove, {once:true})
 })
 
-function makeMove() {
-  //add functionality here
-  //place marker
-  //check for win
-  //check for draw
-  //switch turns
+//Okay, the function removes class empty when clicked, next step...
+//Add either X or O now.
+  //Adds x, now..
+//Add logic, if X started, switch to O. Use !
+let currentPlayer = x;
+function makeMove(e) {
+  const square = e.target;
+  const squareClass = square.classList;
+  if (squareClass.contains("empty")) {
+    squareClass.remove("empty");
+    squareClass.add(currentPlayer);x
+
+    //switch currentPlayer
+    currentPlayer = currentPlayer === x ? o : x;
+  }
 }
 
+//Adding functionality to reset button
+const reset = $(".reset");
+reset.on("click", () => {
+  location.reload();
+})
 
+//Add winning or draw message
+//If X or O win
+  //Decide the coordinates that decide a win
+  //If no win then it's a draw
+//Have message show when all squares are clicked
+  //or show message when winner or draw
+//Add event listener to restart button
+  //On click remove show class and reset board
 
+  
+// const message = $(".message")
+// function message() {
 
-
+// }
 })
