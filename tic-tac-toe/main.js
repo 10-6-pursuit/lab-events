@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 HTMLElement.prototype.on = (a,b,c) => this.addEventListener(a,b,c);
 HTMLElement.prototype.off = (a,b) => this.removeEventListener(a,b);
 HTMLElement.prototype.$ = (s) => this.querySelector(s);
-HTMLElement.prototype.$ = (s) => this.querySelectorAll(s);
+HTMLElement.prototype.$$ = (s) => this.querySelectorAll(s);
 //----------------------------------------------------------
 //Creating section with class="board" and appending to main
 const main = $("main");
@@ -34,6 +34,8 @@ function makeBoard () {
 //Loads makeBoard() when DOM is fully loaded
 document.on("DOMContentLoaded", makeBoard());
 
+//create variable for circle and square for turn selection
+
 //Create function adding eventListener to squares
 // {once:true} allows a square to only have an eventListener once
 square.forEach((cell) => {
@@ -42,6 +44,10 @@ square.forEach((cell) => {
 
 function makeMove() {
   //add functionality here
+  //place marker
+  //check for win
+  //check for draw
+  //switch turns
 }
 
 
