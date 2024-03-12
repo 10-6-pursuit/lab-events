@@ -25,15 +25,20 @@ footer {
 header h1 {
   margin: 0 0 50px;
   padding: 25px;
+  text-align: center;
+}
+
+.cell {
+  text-align: center;
 }
 
 #canvas {
   border: 3px solid #393e41;
   display: grid;
-  grid-template-columns: repeat(20, 25px);
-  height: 500px;
+  grid-template-columns: repeat(20, 30px);
+  height: 600px;
   margin: 0 auto;
-  width: 500px;
+  width: 600px;
 }
 
 .cell {
@@ -41,8 +46,8 @@ header h1 {
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 }
 
 #current-color {
@@ -89,4 +94,8 @@ a {
 a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
+}
+
+.black {
+  color: white;
 }
