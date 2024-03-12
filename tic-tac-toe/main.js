@@ -33,6 +33,7 @@ function makeBoard () {
 }
 //Loads makeBoard() when DOM is fully loaded
 document.on("DOMContentLoaded", makeBoard());
+// window.onload = makeBoard();
 
 //create variable for circle and square for turn selection
 

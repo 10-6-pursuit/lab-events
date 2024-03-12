@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     return this.querySelectorAll(s);
   }
 
+  const create = function(args) {
+    return document.createElement(args);
+  }
+
+  HTMLElement.prototype.on = (a,b,c) => this.addEventListener(a,b,c);
+
   //When color is clicked in the #palette, the #current-color background changes to that color.
   const palette = $$("#palette .color");
   const currentColor = $("#current-color");
@@ -25,8 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
     color.addEventListener("click", () => {
     currentColor.style.background = color.style.background;
     })
-  })
+  });
 
+  //creating cells
+  function makeCells() {
+    for(let i = 0; i < 100; i++) {
+      const div = create("div");
+      div.className = "cell";
+      canvas.appendChild(div)
+    }
+  }
+
+  window.onload = makeCells();
 
   //When clicked on a .cell,background changes to match the background of #current-color.
 
