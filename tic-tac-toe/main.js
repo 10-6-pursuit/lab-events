@@ -79,7 +79,7 @@ function checkForWin() {
 
 function showFinalResult(winner = "") {
 	title.innerText = winner
-		? `Congrants on the win! ${winner}`
+		? `Congrats on the win! ${winner}`
 		: "It' s a draw guys";
 	square.forEach((ele) => (ele.style.pointerEvents = "none"));
 }
