@@ -75,3 +75,8 @@ a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
 }
+section{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
