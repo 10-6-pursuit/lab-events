@@ -76,9 +76,13 @@ header h1 {
 }
 
 nav {
-  display: flex;
+  display:flex;
   justify-content: space-evenly;
 }
+
+/* footer{
+  margin-top: 50px;
+} */
 
 a {
   text-decoration: none;
