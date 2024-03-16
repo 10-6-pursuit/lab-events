@@ -22,9 +22,9 @@ There are two parts to this lab: Pixel Painter and Tic Tac Toe.
 
 You will need to complete the following tasks. If you're unclear about any of the instructions below, reach out to your instructor.
 
-- [ ] When a color is clicked in the `#palette`, the `#current-color` element should have its background changed to that color. For example, if you click the green circle in the `#palette`, the `#current-color` element's background should change to be green.
+- [X] When a color is clicked in the `#palette`, the `#current-color` element should have its background changed to that color. For example, if you click the green circle in the `#palette`, the `#current-color` element's background should change to be green.
 
-- [ ] When you click on a `.cell`, its background should change to match the background of `#current-color`.
+- [X] When you click on a `.cell`, its background should change to match the background of `#current-color`.
 
 ![pixel painter demo](./assets/ezgif.com-pixel-painter.gif)
 
@@ -47,9 +47,9 @@ Feel free to add other fun features to build out your pixel painter!
 
 You will need to complete the following tasks. If you're unclear about any of the instructions below, reach out to your instructor.
 
-- [ ] Write a function called `makeBoard()` that will generate 9 `div` with the class `empty` and another class `square`.
+- [X] Write a function called `makeBoard()` that will generate 9 `div` with the class `empty` and another class `square`.
 
-- [ ] Call `makeBoard()` on page load so that 9 squares appear and the board is 3 x 3 squares.
+- [X] Call `makeBoard()` on page load so that 9 squares appear and the board is 3 x 3 squares.
 
 - [ ] Write a function called `makeMove()` that is an event handler for the `div`s with the class of `square` that
 

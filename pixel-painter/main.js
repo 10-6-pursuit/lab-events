@@ -10,7 +10,7 @@ for (let i = 0; i < 100; i++) {
     newCell.className = "cell";
     newCell.addEventListener("click", (event) => {
     event.target.style.background = currColor.style.background;
-})
+});
 
 
     main.appendChild(newCell);
@@ -21,7 +21,7 @@ for (let i = 0; i < 100; i++) {
 for (let color of colorPalette) {
     color.addEventListener("click", (event) => {
         currColor.style.background = event.target.style.background;
-    })
+    });
 }
 
 const resetButton = document.createElement("button");
@@ -32,7 +32,7 @@ fillButton.textContent = "Fill";
 
 resetButton.addEventListener("click", () => {
     document.querySelectorAll(".cell").forEach((cell) => {
-        cell.style.background = "white";
+        cell.style.background = "none";
     });
 });
 
@@ -42,5 +42,5 @@ fillButton.addEventListener("click", () => {
     });
 });
 
-paletteBar.append("resetButton");
-paletteBar.append("fillButton");
+paletteBar.append(resetButton);
+paletteBar.append(fillButton);
