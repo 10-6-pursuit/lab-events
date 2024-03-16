@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const $ = function(args) { 
     return document.querySelector(args);
   }
@@ -43,12 +43,12 @@ function makeBoard () {
   }
 }
 //Loads makeBoard() when DOM is fully loaded
-// document.on("DOMContentLoaded", makeBoard());
 window.onload = makeBoard();
 
 //create variable for circle and square for turn selection
 const x = "x";
 const o = "o";
+
 //Create function adding eventListener to squares
 // {once:true} allows a square to only have an eventListener once
 const squares = $$(".square");
@@ -57,17 +57,14 @@ squares.forEach((square) => {
   square.on("click", makeMove, {once:true})
 })
 
-//Okay, the function removes class empty when clicked, next step...
-//Add either X or O now.
-  //Adds x, now..
-//Add logic, if X started, switch to O. Use !
+//Function removes class empty when clicked, next and Add logic, if X started, switch to O.
 let currentPlayer = x;
 function makeMove(e) {
   const square = e.target;
   const squareClass = square.classList;
   if (squareClass.contains("empty")) {
     squareClass.remove("empty");
-    squareClass.add(currentPlayer);x
+    squareClass.add(currentPlayer);
 
     //switch currentPlayer
     currentPlayer = currentPlayer === x ? o : x;
@@ -80,18 +77,12 @@ reset.on("click", () => {
   location.reload();
 })
 
+//Extra functionality: Declare Winner
 //Add winning or draw message
 //If X or O win
   //Decide the coordinates that decide a win
   //If no win then it's a draw
-//Have message show when all squares are clicked
-  //or show message when winner or draw
+//Show message when winner or draw
 //Add event listener to restart button
   //On click remove show class and reset board
-
-  
-// const message = $(".message")
-// function message() {
-
-// }
 })

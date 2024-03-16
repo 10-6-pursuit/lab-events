@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
 //Created own variables
   const $ = function(args) {
     return document.querySelector(args);
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   HTMLElement.prototype.on = (a,b,c) => this.addEventListener(a,b,c);
 
   //When color is clicked in the #palette, the #current-color background changes to that color.
-  const palette = $$("#palette .color");
+  const palette = $$(".color");
   const currentColor = $("#current-color");
   const canvas = $("#canvas");
 
