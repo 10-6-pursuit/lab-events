@@ -87,8 +87,8 @@ a:hover {
 
 .modal-content {
   background-color: black;
-  margin: 15% auto;
-  padding: 20px;
+  margin: auto;
+  padding: 0px;
   border: none;
   width: 80%;
 }
@@ -109,5 +109,5 @@ a:hover {
 
 p {
   color: plum;
-  font-size: xx-large;
+  font-size: 450%
 }

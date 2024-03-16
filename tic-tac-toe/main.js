@@ -42,7 +42,7 @@ for (let square of squares) {
         if (attribute.includes("empty")) {
             sqr.textContent = `${letter}`
             sqr.classList.remove("empty")
-            sqr.classList.add(`${letter}`)
+            square.inert = true
         }
 
         let leftCol = squares[0].textContent + squares[1].textContent + squares[2].textContent
@@ -56,18 +56,28 @@ for (let square of squares) {
 
         const winCon = [leftCol, midCol, rightCol, topRow, midRow, botRow, leftDia, rightDia]
 
-        for (let win of winCon) {
-            if (win.includes("XXX")) {
+        let win = false
+        
+        for (let wins of winCon) {
+            if (wins.includes("XXX")) {
+                win = true
                 msg.innerText = "O is the loser!!!"
                 modal.style.display = "block";
+                for (let square of squares) {
+                    square.inert = true
+                }
             }
-            if (win.includes("OOO")) {
+            if (wins.includes("OOO")) {
+                win = true
                 msg.innerText = "X is the loser!!!"
                 modal.style.display = "block";
+                for (let square of squares) {
+                    square.inert = true
+                }
             }
         }
-
-        if (emptySquares.length === 1) {
+        
+        if (emptySquares.length === 1 && win === false) {
             msg.innerText = "Everybody loses!!!"
             modal.style.display = "block";
         }
@@ -85,6 +95,7 @@ reset.addEventListener("click", () => {
         square.textContent = ""
         square.classList.add("empty", "square")
         modal.style.display = "none";
+        square.inert = false
     }
 })
 
