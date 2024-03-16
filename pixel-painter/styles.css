@@ -20,14 +20,21 @@ header,
 footer {
   background: #7e7f9a;
   color: white;
+  margin-bottom: -21px;
 }
 
-header h1 {
-  margin: 0 0 50px;
+header h1,
+#selection {
   padding: 25px;
   text-align: center;
 }
 
+section {
+  display: flex;
+  justify-content: space-around;
+  font-family: monospace;
+  font-size: 1.5em;
+}
 .cell {
   text-align: center;
 }
@@ -98,4 +105,29 @@ a:hover {
 
 .black {
   color: white;
+}
+
+input {
+    text-decoration: none;
+    font-size: 1.3em;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    background: pink;
+}
+
+#sunflower {
+  color: orange;
+}
+
+#moon {
+  color: yellow
+}
+
+#clover {
+  color:  yellowgreen;
+}
+
+#volcano {
+  color: red
 }
