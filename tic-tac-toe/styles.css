@@ -20,9 +20,11 @@ h1 {
   width: 370px;
   margin: auto;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
   padding: 2em 0;
+  height: 370px;
 }
 
 .square {
@@ -72,4 +74,9 @@ a {
 a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }

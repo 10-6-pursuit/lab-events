@@ -27,10 +27,12 @@ header h1 {
   padding: 25px;
 }
 
+
 #canvas {
   border: 3px solid #393e41;
   display: grid;
-  grid-template-columns: repeat(10, 50px);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   height: 500px;
   margin: 0 auto;
   width: 500px;
@@ -43,6 +45,7 @@ header h1 {
   margin: 0;
   height: 50px;
   width: 50px;
+  cursor: pointer;
 }
 
 #current-color {
@@ -89,3 +92,10 @@ a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
 }
+
+.clear-button{
+margin-left: 10rem;
+width: 8vw;
+height:5vh;
+}
+
