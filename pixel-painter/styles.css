@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+ 
 }
 
 h1,
@@ -15,6 +16,7 @@ h5,
 h6 {
   font-family: "VT323", monospace;
 }
+
 
 header,
 footer {
@@ -34,15 +36,28 @@ header h1 {
   height: 500px;
   margin: 0 auto;
   width: 500px;
+
+  
 }
+#canvas div{
+  border: 0.5px solid gray;
+  display: grid;
+  /* grid-template-rows:repeat(10, 50px);; */
+
+}
+#canvas div {
+  border: 0.5px gray solid;
+
+}
+
+
 
 .cell {
   border: 1px solid #393e41;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  height: 50px;
-  width: 50px;
+ 
 }
 
 #current-color {
@@ -88,4 +103,7 @@ a {
 a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
+}
+footer{
+  margin-top: 5px;
 }
