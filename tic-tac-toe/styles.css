@@ -17,12 +17,27 @@ h1 {
 }
 
 .tic-tac-toe {
-  width: 370px;
+  width: 250px;
   margin: auto;
+  margin-left: 420px;
   box-sizing: border-box;
-  display: flex;
   flex-wrap: wrap;
   padding: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+
+  
+  
+}
+.tic-tac-toe div{
+  border: 1px solid pink;
+  text-align: center;
+  padding: 10px;
+  padding-top: 40px;  
+  padding-bottom: 40px;
+
+
 }
 
 .square {

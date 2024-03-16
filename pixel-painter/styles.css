@@ -57,8 +57,7 @@ header h1 {
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  height: 50px;
-  width: 50px;
+ 
 }
 
 #current-color {
