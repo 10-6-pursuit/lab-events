@@ -28,6 +28,7 @@ for (let elem of color) {
     })
  }
 
+ 
 
 
 
