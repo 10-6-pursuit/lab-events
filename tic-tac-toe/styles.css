@@ -6,13 +6,13 @@ body {
   padding: 0;
   height: 100%;
   font-family: "Raleway", sans-serif;
-  background-color: black;
+  background-color: blue;
   color: ghostwhite;
 }
 
 h1 {
   text-align: center;
-  color: plum;
+  color: orange;
   font-size: 3em;
 }
 
