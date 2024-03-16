@@ -1,75 +1,59 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
-
-html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Raleway", sans-serif;
   background-color: black;
-  color: ghostwhite;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
-  text-align: center;
-  color: plum;
-  font-size: 3em;
-}
-
-.tic-tac-toe {
-  width: 370px;
-  margin: auto;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2em 0;
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  justify-content: center;
+  align-content: center;
+  margin: 20px auto;
 }
 
 .square {
-  height: 120px;
-  width: 120px;
-  border: 1px solid rgb(255, 164, 222);
+  width: 100px;
+  height: 100px;
+  border: 0.5px solid rgb(203, 74, 203);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size: 2em;
-  font-weight: bold;
+  color: white;
 }
 
-.square:hover {
-  background: plum;
+.empty {
+  cursor: pointer;
+  background-color: black;
 }
 
-.square:active {
-  background-color: rebeccapurple;
-}
-
-#wrapper {
-  min-height: 90%;
-  margin-bottom: -100px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-button {
-  padding: 1em;
-  font-family: "Raleway";
-  font-weight: bold;
-  font-size: 1em;
+#reset {
   display: block;
-  margin: auto;
-  background: plum;
+  width: 120px;
+  padding: 10px;
+  margin: 20px auto;
+  border: none;
+  background-color: purple;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  color: plum;
-  font-size: 2em;
+#reset:hover {
+  background-color: #7d2ae8;
 }
-a:hover {
-  background-color: blanchedalmond;
-  opacity: 0.5;
+
+.empty:hover {
+  background-color: #caadf199;
+  transition: background-color 0.3s; 
+}
+
+.x-color {
+  color: #e6e600; 
+}
+
+.o-color {
+  color: #00e6e6; 
 }
