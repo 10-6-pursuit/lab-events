@@ -1,9 +1,14 @@
 const container = document.querySelector(".tic-tac-toe");
 
- const resetButton = document.querySelector("button")
+const resetButton = document.querySelector("button");
 
-resetButton.addEventListener("click", (event) => {
-    event.target.container.reset();
+resetButton.addEventListener("click", () => {
+     document.querySelectorAll(".square").forEach(ele =>{
+        ele.innerText = "";
+        ele.classList.add("empty");
+    });
+
+    acc = 1;
 })
 
 const makeBoard = () => {
@@ -18,17 +23,18 @@ window.onload = makeBoard();
 
 const emptyCell = document.querySelectorAll(".square");
 
-let acc = 0;
+let acc = 1;
 
 const makeMove = () => {
     emptyCell.forEach(ele => ele.addEventListener("click", (event) => {
-        acc++;
         if(event.target.classList.contains("empty") && acc % 2 !== 0) {
             event.target.innerText = "X";
             event.target.classList.remove("empty");
+            acc++;
         } else if (event.target.classList.contains("empty") && acc % 2 === 0){
             event.target.innerText = "O";
             event.target.classList.remove("empty");
+            acc++;
         }
     }))
 }
