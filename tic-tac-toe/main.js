@@ -39,3 +39,11 @@ function checkWinner(){
             gameover = true;
     }
 }  
+
+const button = document.querySelector("button");
+button.addEventListener("click",event =>{
+    for(let i = 0;i<allSquarez.length;i++){
+        allSquarez[i].innerText = ""
+        gameover = true;
+    }
+})
