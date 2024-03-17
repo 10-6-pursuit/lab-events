@@ -44,3 +44,20 @@ fillButton.addEventListener("click", () => {
 
 paletteBar.append(resetButton);
 paletteBar.append(fillButton);
+
+class clickAndHold {
+    /**
+     * 
+     * @param {EventTarget} target The HTML element to apply the event to
+     * @param {Function} callback The function to run once the target is clicked and held
+     */
+    constructor(target, callback) {
+        this.target = target;
+        this.callback = callback;
+        this.isHeld = false;
+        this.activeHoldTimeoutId = null;
+    }
+    _onHoldStart() {
+        this.isHeld = true;
+    }
+}
