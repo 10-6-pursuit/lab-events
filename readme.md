@@ -37,7 +37,7 @@ Remember that you can access an elements style declarations by accessing the `.s
 Attempt to implement _at least one_ of the following features:
 
 - [ ] Increase the number of cells without increasing the width or height of the `#canvas` element.
-- [ ] Change the event listener so that instead of clicking to fill a color, you hold down your mouse.
+- [X] Change the event listener so that instead of clicking to fill a color, you hold down your mouse.
 - [X] Create a button that, when clicked, resets all cells so that they all have a background of white.
 - [X] Create a button that, when clicked, changes all of the cells so that they match the `#current-color` element's background.
 
@@ -57,7 +57,7 @@ You will need to complete the following tasks. If you're unclear about any of th
   - If the square has the class empty add either an `X` or an `O` inside the square, remove the class `empty` and write some logic so that the next time this function is called the other player has a play (first play an X then an O, then an X...).
   - Players should NOT be able to change a full square.
 
-- [ ] Add a listener to the reset button and write an event handler function called `reset`, that removes the squares and then calls `makeBoard()` to reset the board.
+- [X] Add a listener to the reset button and write an event handler function called `reset`, that removes the squares and then calls `makeBoard()` to reset the board.
 
 ![Tic Tac Toe Demo](./assets/ezgif.com-tic-tac-toe.gif)
 
